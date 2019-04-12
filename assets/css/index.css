@@ -10,15 +10,15 @@
 }
 .bottom_method {
     width: 100%;
-    height: 11.5625rem;
+    height: 13.125rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
 }
 .bottom_other {
     width: 100%;
-    height: 5rem;
-    border-top: 1px solid #e2e2e2;
+    height: 3.5rem;
+    border-top: 0.0625rem solid #e2e2e2;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -42,15 +42,177 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    padding: 0 4.6875rem;
+    padding: 0 3.6875rem;
     background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 .line {
     width: 100%;
     position: relative;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.line .words {
     font-size: 0.75rem;
     font-weight: 700;
     text-align: center;
     color: #bdbdbd;
-    line-height: 1rem;
+}
+.line .left,.line .right {
+    width: 35%;
+    height: 0.0625rem;
+    background: #eeeeee;
+}
+.facebook_method {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.box > div {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #48618a;
+    padding-left: 1.25rem;
+}
+.top_content {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 1.0625rem 1.625rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.logout {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1.25rem;
+}
+.logout img{
+    height: 1.25rem;
+}
+.copy_right {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #232323;
+    font-weight: 500;
+    height: 1.0625rem;
+}
+.btn_box {
+    width: 100%;
+    height: 3.375rem;
+    box-sizing: border-box;
+    background: #fff;
+    display: flex;
+    padding: 0 0.9375rem;
+}
+.btn_box .btn {
+    width: 100%;
+    background: #00cada;
+    height: 3.375rem;
+    border-radius: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.btn_box .btn::after {
+    content: "";
+    position: absolute;
+    left: -12%;
+    top: -1.875rem;
+    width: .5rem;
+    height: 200%;
+    /* background-color: rgba(255, 255, 255, .6); */
+    border-left:0.9375rem solid rgba(255, 255, 255, .6);
+    border-right: 0.5rem solid rgba(255, 255, 255, .6);
+    transform: rotate(15deg);
+    animation: searchLights 1s ease-in infinite;
+}
+
+.btn_box .btn span {
+    font-size: 0.9375rem;
+    color: #fff;
+    font-weight: 700;
+    padding-left: 1.1875rem;
+}.btn_box .btn img {
+    height: 1.75rem;
+}
+.logo {
+    height: 100%;
+    width: 100%;
+    background: url("../images/index/logo.png") no-repeat center center;
+    background-size: 100%;
+}
+@keyframes searchLights {
+    0% {
+        left: -12%;
+    }
+
+    to {
+        left: 102%;
+    }
+}
+
+@keyframes rubberBand {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    30% {
+        -webkit-transform: scale3d(1.25, 0.75, 1);
+        transform: scale3d(1.25, 0.75, 1);
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.75, 1.25, 1);
+        transform: scale3d(0.75, 1.25, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.15, 0.85, 1);
+        transform: scale3d(1.15, 0.85, 1);
+    }
+
+    65% {
+        -webkit-transform: scale3d(0.95, 1.05, 1);
+        transform: scale3d(0.95, 1.05, 1);
+    }
+
+    75% {
+        -webkit-transform: scale3d(1.05, 0.95, 1);
+        transform: scale3d(1.05, 0.95, 1);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+.rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
