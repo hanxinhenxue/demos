@@ -10,7 +10,7 @@
 }
 .bottom_method {
     width: 100%;
-    height: 13.125rem;
+    height: 9.5625rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -26,17 +26,17 @@
     background: #fafafa;
 }
 .skip_method {
-    height: 2.5rem;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    color: #999;
-    font-size: 0.625rem;
-    font-weight: 600;
 }
 .skip_method span {
-    padding-left: 0.9375rem;
+    padding-left: 0.625rem;
     padding-right: 0.5rem;
+    color: #999;
+    font-size: 0.9375rem;
+    font-weight: 500;
 }
 .bottom_desc {
     width: 100%;
@@ -51,8 +51,8 @@
 .line {
     width: 100%;
     position: relative;
-    height: 2.25rem;
-    line-height: 2.25rem;
+    height: 3.1875rem;
+    line-height: 3.1875rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,7 +91,7 @@
     height: 100%;
     background: #fff;
     box-sizing: border-box;
-    padding: 1.0625rem 1.625rem;
+    padding: 1.0625rem 1.0625rem 0;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -112,26 +112,26 @@
     font-size: 0.8125rem;
     color: #232323;
     font-weight: 500;
-    height: 1.0625rem;
 }
 .btn_box {
     width: 100%;
-    height: 3.375rem;
+    height: 2.9375rem;
     box-sizing: border-box;
     background: #fff;
     display: flex;
-    padding: 0 0.9375rem;
+    padding: 0 1.0625rem;
 }
 .btn_box .btn {
     width: 100%;
     background: #00cada;
-    height: 3.375rem;
+    height: 2.9375rem;
     border-radius: 0.8rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
     position: relative;
+    padding: 0 1.5625rem;
     overflow: hidden;
 }
 .btn_box .btn::after {
@@ -153,14 +153,19 @@
     color: #fff;
     font-weight: 700;
     padding-left: 1.1875rem;
-}.btn_box .btn img {
+    white-space: nowrap;
+}
+.btn_box .btn img {
     height: 1.75rem;
 }
 .logo {
-    height: 100%;
+    height: 80%;
+    box-sizing: border-box;
+    padding: 2.0625rem;
     width: 100%;
     background: url("../images/index/logo.png") no-repeat center center;
-    background-size: 100%;
+    background-size: 80%;
+    background-clip: content-box;
 }
 @keyframes searchLights {
     0% {
