@@ -59,7 +59,7 @@ new Vue({
         "list-card":{
             template:`<div class="list_container">
                 <div class="left_head">
-                    <img src="../assets/images/golden/customer.svg">
+                    <img src="../images/golden/customer.svg">
                 </div>
                 <div class="right_info">
 
@@ -96,7 +96,7 @@ new Vue({
         "coin-card": {
             template: `<div class="list_container">
                 <div class="left_head">
-                    <img src="../assets/images/golden/customer.svg">
+                    <img src="../images/golden/customer.svg">
                 </div>
                 <div class="right_info">
 
