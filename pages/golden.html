@@ -8,7 +8,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport"
         content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
-    <!-- <link rel="stylesheet" href="../lib/antd.min.css"> -->
+    <link rel="stylesheet" href="../lib/antd.min.css">
     <link rel="stylesheet" href="../assets/css/softRest.css">
     <!-- <link rel="stylesheet" href="../lib/animate.css"> -->
     <link rel="stylesheet" href="../assets/css/golden.css">
@@ -34,9 +34,67 @@
 
         <div class="content">
 
-            <div class="first_top"></div>
+            <div class="first_top">
+                <div class="btn_box">
+                    <img src="../assets/images/golden/white.svg" alt="">
+                    <div class="btn_words">X 30 Followers</div>
+                </div>
+
+                <div class="discount_info">
+                    only <span>$ 1.99</span> <i>$ 19.9</i>
+                </div>
+
+                <span class="desc_btn">
+                    This Limited offer for newbie is a one time purchase!
+                </span>
+
+                <div class="price_right">
+                    <p>90%</p>
+                    <p>OFF</p>
+                </div>
+
+                <!-- timer -->
+                <div class="timer">{{hours}}:{{minutes}}:{{seconds}}</div>
+            </div>
             
-            <div class="second_center"></div>
+            <div class="second_center">
+                <div class="second_title">
+                    <div class="left_title">
+                        <img src="../assets/images/golden/customer.svg" alt="">
+                        <span>Golden Followers</span>
+                    </div>
+                    <div class="right_question">
+                        <a-icon type="question-circle" />
+                    </div>
+
+                </div>
+                <div class="second_list">
+                    <div class="list_item">
+                        <img src="../assets/images/golden/heart.svg" alt="">
+                        <div class="desc_item">
+                            <p>Never</p>
+                            <p>Unfollow</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img src="../assets/images/golden/good.svg" alt="">
+                        <div class="desc_item">
+                            <p>Never</p>
+                            <p>Unfollow</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img src="../assets/images/golden/hg.svg" alt="">
+                        <div class="desc_item">
+                            <p>Never</p>
+                            <p>Unfollow</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="second_content">
+                    <list-card v-for="(res,index) in prices" :key="index" :index="index" :info="res"></list-card>
+                </div>
+            </div>
 
             <div class="line">
                 <div class="left_line"></div>
@@ -45,10 +103,30 @@
             </div>
 
             <div class="ads">
-
+                <img src="../assets/images/golden/money.png">
+                <div class="ads_desc">
+                    <div class="ads_info">
+                        <div class="ads_title">
+                            GET <span>FREE</span> Coins
+                        </div>
+                        <div class="ads_sub">
+                            over 1,000 Coins Here!
+                        </div>
+                    </div>
+                    <a-icon type="right" />
+                </div>
             </div>
 
-            <div class="last_bottom"></div>
+            <div class="last_bottom">
+                <div class="last_title">
+                    <img src="../assets/images/golden/coin.svg" alt="">
+                    <span>5</span>
+                    coins available
+                </div>
+                <div class="last_container">
+                    <coin-card v-for="(res,index) in prices" :key="index" :index="index" :info="res"></list-card>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -56,6 +134,6 @@
 
 </html>
 <script src="../lib/vue.min.js"></script>
-<!-- <script src="../lib/antd.min.js"></script> -->
-<!-- <script src="../lib/moment.min.js"></script> -->
+<script src="../lib/antd.min.js"></script>
+<script src="../lib/moment.min.js"></script>
 <script src="../assets/js/golden.js"></script>
