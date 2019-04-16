@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>likes</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport"
+        content="width=device-width,height=device-height, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" href="../lib/antd.min.css">
+    <link rel="stylesheet" href="../assets/css/softRest.css">
+    <!-- <link rel="stylesheet" href="../lib/animate.css"> -->
+    <link rel="stylesheet" href="../assets/css/likes.css">
+</head>
+
+<body>
+    <div id="likes" v-cloak @selectstart.prevent>
+
+        <div class="top_user_box">
+            <div class="left">
+                <div class="head_box">
+                    <img src="../assets/images/likes/add.svg" alt="">
+                </div>
+                <div class="desc">
+                    <h5>Add Account</h5>
+                    <p>to get likes</p>
+                </div>
+            </div>
+            <div class="right">
+                <img src="../assets/images/golden/toggle.svg" alt="">
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="first_top">
+                <div class="card_content">
+                    <div class="card_item">
+                        <div class="card_t">
+                            <img src="../assets/images/likes/heart.svg">
+                            <span>100</span>
+                        </div>
+                        <div class="card_c">
+                            <span>
+                                $ 4.27
+                            </span>
+                        </div>
+                        <div class="card_b">
+                            $2.99
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <div class="card_t">
+                            <img src="../assets/images/likes/heart.svg">
+                            <span>200</span>
+                        </div>
+                        <div class="card_c">
+                            <span>
+                                $ 8.31
+                            </span>
+                        </div>
+                        <div class="card_b">
+                            $4.99
+                        </div>
+                    </div>
+                    <div class="card_item">
+                        <div class="card_t">
+                            <img src="../assets/images/likes/heart.svg">
+                            <span>500</span>
+                        </div>
+                        <div class="card_c">
+                            <span>
+                                $ 19.98
+                            </span>
+                        </div>
+                        <div class="card_b">
+                            $9.99
+                        </div>
+                    </div>
+                </div>
+                <p class="center_desc">
+                    This Limited offer for newbie is a one time purchase!
+                </p>
+                <!-- timer -->
+                <div class="timer">{{hours}}:{{minutes}}:{{seconds}}</div>
+                <!-- star -->
+                <div class="star">
+                    <p>30%</p>
+                    <p>OFF</p>
+                </div>
+            </div>
+
+            <div class="second_center">
+                <div class="second_title">
+                    <div class="left_title">
+                        <img src="../assets/images/likes/tb.svg" alt="">
+                    </div>
+                    <div class="right_title">
+                        <span>likes</span>
+                        <div class="sub">Real & fast Instagram</div>
+                    </div>
+
+                </div>
+                <div class="second_content">
+                    <list-card v-for="(res,index) in result" :key="index" :index="index" :info="res"></list-card>
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="left_line"></div>
+                <span>Or Get Likes by Coins</span>
+                <div class="right_line"></div>
+            </div>
+
+            <div class="ads">
+                <img src="../assets/images/likes/gift.png">
+                <div class="ads_desc">
+                    <div class="ads_info">
+                        <div class="ads_title">
+                            GET <span>FREE</span> Coins
+                        </div>
+                        <div class="ads_sub">
+                            over 1,000 Coins Here!
+                        </div>
+                    </div>
+                    <a-icon type="right" />
+                </div>
+            </div>
+
+            <div class="last_bottom">
+                <div class="last_title">
+                    <img src="../assets/images/golden/coin.svg" alt="">
+                    <span>5</span>
+                    coins available
+                </div>
+                <div class="last_container">
+                    <coin-card v-for="(res,index) in coins" :key="index" :index="index" :info="res">
+                        </coin-card>
+                </div>
+                <div class="more_operate">
+                    <div class="box">
+                        <span>MORE OPTIONS</span>
+                        <a-icon type="right" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="line">
+                <div class="left_line"></div>
+                <span>Get Likes automatically on each post</span>
+                <div class="right_line"></div>
+            </div>
+
+            <div class="other_bottom">
+                <div class="bottom_item" v-for="(res,index) in trend" :key="index">
+
+                    <div class="left_box">
+
+                        <div class="left_img">
+                            <img src="../assets/images/likes/qs.svg" alt="">
+                        </div>
+
+                        <div class="right_info">
+
+                            <div class="right_info_t">
+                                <span>{{res.num}}</span> x <img src="../assets/images/likes/rl.svg" alt=""><i>days</i>
+                            </div>
+
+                            <div class="right_info_b">
+                                <span>{{res.num}}</span>likes for every new post
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="right_box">
+
+                        <div class="right_price">
+                            $ {{res.total}}
+                        </div>
+
+                        <div class="right_desc">
+                            <span>$ {{res.one}}</span>&nbsp;/&nbsp;day
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="more_menu">
+                    <div class="box">
+                        <span>MORE LIKES GROWTH PLANS </span>
+                        <a-icon type="right" />
+                    </div>
+                </div>
+
+            </div>
+
+            <footer>
+                <h6>With our service you can always expect</h6>
+                <div class="second_list">
+                    <div class="list_item">
+                        <img src="../assets/images/likes/finish.svg" alt="">
+                        <div class="desc_item">
+                            <p>Instant</p>
+                            <p>Delivery</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img src="../assets/images/likes/time.svg" alt="">
+                        <div class="desc_item">
+                            <p>Best</p>
+                            <p>Quality</p>
+                        </div>
+                    </div>
+                    <div class="list_item">
+                        <img src="../assets/images/likes/sup.svg" alt="">
+                        <div class="desc_item">
+                            <p>Persistent</p>
+                            <p>Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer_menu">
+                    <div class="box">
+                        <span>Frequently Asked Questions </span>
+                        <a-icon type="right" />
+                    </div>
+                </div>
+                <p class="email">
+                    or contact: <span>inquiries@popuboom.com</span>
+                </p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../lib/vue.min.js"></script>
+<script src="../lib/antd.min.js"></script>
+<script src="../lib/moment.min.js"></script>
+<script src="../assets/js/likes.js"></script>

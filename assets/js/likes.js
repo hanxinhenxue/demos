@@ -1,15 +1,15 @@
 new Vue({
-    el:'#golden',
+    el:'#likes',
     data:{
         endTime:'2019-05-01',
-        prices:[
+        result: [
             {
-                num:100,
+                num:500,
                 discount:'50%',
-                price:'19.99'
+                price:'9.99'
             },
             {
-                num: 3,
+                num: 25,
                 discount: '',
                 price: '0.99'
             },
@@ -19,67 +19,86 @@ new Vue({
                 price: '4.99'
             },
             {
-                num: 40,
+                num: 10,
                 discount: '30%',
                 price: '9.99'
             },
             {
-                num: 400,
+                num: 5,
                 discount: '70%',
                 price: '49.99'
             },
         ],
         coins:[
             {
-                num:25,
-                price:'1,000'
-            },
-            {
-                num:5,
+                num:50,
                 price:'200'
             },
             {
                 num:10,
+                price:'40'
+            },
+            {
+                num:20,
+                price:'80'
+            },
+            {
+                num:30,
+                price:'120'
+            },
+            {
+                num:100,
                 price:'400'
             },
             {
-                num:15,
-                price:'600'
-            },
-            {
-                num:50,
-                price:'2,000'
-            },
-            {
-                num: 100,
+                num: 500,
                 price: '4,000'
             },
             {
-                num: 200,
+                num: 1000,
                 price: '8,000'
             },
             {
-                num: 300,
+                num: 3000,
                 price: '12,000'
-            },
-            {
-                num: 500,
-                price: '20,000'
-            },
-            {
-                num: 1000,
-                price: '40,000'
-            },
+            }
         ],
         hours:0,
         minutes:0,
-        seconds:0
+        seconds:0,
+        trend:[
+            {
+                num:500,
+                total:"99.99",
+                one:'15.99'
+            },
+            {
+                num: 100,
+                total: "24.99",
+                one: '5.99'
+            },
+            {
+                num: 250,
+                total: "49.99",
+                one: '8.99'
+            },
+            {
+                num: 2000,
+                total: "299.99",
+                one: '45.99'
+            },
+            {
+                num: 2500,
+                total: "399.99",
+                one: '58.99'
+            },
+        ]
     },
     components: {
         "list-card":{
             template:`<div class="list_container">
                 <div class="left_head">
-                    <img src="../assets/images/golden/customer.svg">
+                    <img src="../assets/images/likes/heart.svg">
                 </div>
                 <div class="right_info">
 
@@ -116,7 +135,7 @@ new Vue({
         "coin-card": {
             template: `<div class="list_container">
                 <div class="left_head">
-                    <img src="../assets/images/golden/customer.svg">
+                    <img src="../assets/images/likes/heart.svg">
                 </div>
                 <div class="right_info">
 

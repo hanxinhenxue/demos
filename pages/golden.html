@@ -48,7 +48,7 @@
                     This Limited offer for newbie is a one time purchase!
                 </span>
 
-                <div class="price_right">
+                <div class="star">
                     <p>90%</p>
                     <p>OFF</p>
                 </div>
@@ -124,7 +124,13 @@
                     coins available
                 </div>
                 <div class="last_container">
-                    <coin-card v-for="(res,index) in prices" :key="index" :index="index" :info="res"></list-card>
+                    <coin-card v-for="(res,index) in coins" :key="index" :index="index" :info="res"></coin-card>
+                </div>
+                <div class="more_operate">
+                    <div class="box">
+                        <span>MORE OPTIONS</span>
+                        <a-icon type="right" />
+                    </div>
                 </div>
             </div>
 
