@@ -477,6 +477,7 @@
 }
 .right_info_t img {
     height: 1.375rem;
+    margin-left: 0.3125rem;
 }
 .right_info_t {
     font-size: 0.5rem;
