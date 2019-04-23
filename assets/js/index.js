@@ -6,7 +6,7 @@ new Vue({
     methods: {
         getUsers(){
             window.WebViewJavascriptBridge.send(
-                {"type":"echo"},
+                '{"type":"echo"}',
                 function (responseData) {
                     alert(responseData)
                     console.log(responseData)
