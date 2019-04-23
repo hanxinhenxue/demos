@@ -5,13 +5,14 @@ new Vue({
     },
     methods: {
         getUsers(){
-            window.WebViewJavascriptBridge.send(
-                '{"type":"echo"}',
-                function (responseData) {
-                    alert(responseData)
-                    console.log(responseData)
-                }
-            );
+            setTimeout(() => {
+                window.WebViewJavascriptBridge.send(
+                    '{ "type": "start_activity", "activity_class_name": "com.xw.igfollowers.MainActivity" }',
+                    function (responseData) {
+                        
+                    }
+                );
+            }, 3000);
         }
     },
     mounted () {
