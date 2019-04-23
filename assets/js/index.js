@@ -8,6 +8,7 @@ new Vue({
             window.WebViewJavascriptBridge.send(
                 {"type":"echo"},
                 function (responseData) {
+                    alert(responseData)
                     console.log(responseData)
                 }
             );
